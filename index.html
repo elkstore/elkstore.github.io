@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELKINANI</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f0ff, #e0d4ff);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 60px 20px;
+      border-bottom: 2px solid #c9aaff;
+    }
+    h1 { margin: 10px 0; font-size: 40px; color: #4b0082; letter-spacing: 2px; }
+    h2 { margin: 5px 0 20px 0; font-size: 20px; color: #6a0dad; font-weight: normal; }
+    p.description { font-size: 16px; max-width: 550px; margin: 20px auto; line-height: 1.6; }
+    
+    .buttons a {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 30px;
+      background: #a377ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .buttons a:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: #7b3fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .lang-toggle {
+      margin-top: 20px;
+      cursor: pointer;
+      color: #4b0082;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    .qrcode {
+      margin: 30px auto 0;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #a377ff;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      padding: 5px;
+      background: #fff;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #555;
+      border-top: 2px solid #c9aaff;
+      background: #f5f0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="title">ELKINANI</h1>
+    <h2 id="subtitle">From dreams to Deals</h2>
+    <p class="description" id="desc">
+      Skilled in logo, ads & clothing designs<br>
+      Freelance services | Fast & high quality<br>
+      Beautiful & stylish designs
+    </p>
+    <div class="buttons">
+      <a href="https://www.instagram.com/anas__.elk" target="_blank">Instagram</a>
+    </div>
+
+    <img class="qrcode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/anas__.elk" alt="QR Code">
+
+    <div class="lang-toggle" id="toggleLang">العربية</div>
+  </header>
+
+  <footer>
+    © 2025 ELKINANI
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggleLang');
+    const title = document.getElementById('title');
+    const subtitle = document.getElementById('subtitle');
+    const desc = document.getElementById('desc');
+    let isEnglish = true;
+
+    toggle.addEventListener('click', () => {
+      if(isEnglish){
+        title.textContent = "ELKINANI";
+        subtitle.textContent = "من الأحلام إلى الصفقات";
+        desc.innerHTML = "ماهر في تصميم الشعارات، الإعلانات وملابس<br>خدمات فريلانس | سريع وذو جودة عالية<br>تصاميم جميلة وأنيقة";
+        toggle.textContent = "English";
+        isEnglish = false;
+      } else {
+        title.textContent = "ELKINANI";
+        subtitle.textContent = "From dreams to Deals";
+        desc.innerHTML = "Skilled in logo, ads & clothing designs<br>Freelance services | Fast & high quality<br>Beautiful & stylish designs";
+        toggle.textContent = "العربية";
+        isEnglish = true;
+      }
+    });
+  </script>
+
+</body>
+</html>
