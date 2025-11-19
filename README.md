@@ -1,2 +1,2 @@
-# elkstore.github.io
+# ELKINANIstore.github.io
 Personal portfolio website
